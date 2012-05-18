@@ -31,8 +31,10 @@ $threeSixtyFivePioneers = 89359;
 $prospectAgeLimit = 2592000; // 30 days
 $purchaserAgeLimit= 1814400; // 21 days
 
-ageProspects($accountId, $clientFolderId, $prospectList, $purchasedGeneralList, $deadGeneralList, $prospectAgeLimit);
-agePurchasers($accountId, $clientFolderId, $purchasedGeneralList, $deadGeneralList, $purchaserAgeLimit);
+// Defunct Lists
+//ageProspects($accountId, $clientFolderId, $prospectList, $purchasedGeneralList, $deadGeneralList, $prospectAgeLimit);
+//agePurchasers($accountId, $clientFolderId, $purchasedGeneralList, $deadGeneralList, $purchaserAgeLimit);
+
 agePurchasers($accountId, $clientFolderId, $purchasedBagList, $deadBagList, $purchaserAgeLimit);
 agePurchasers($accountId, $clientFolderId, $purchasedCapsList, $deadCapsList, $purchaserAgeLimit);
 agePurchasers($accountId, $clientFolderId, $specialOfferVIPs, $threeSixtyFivePioneers, $purchaserAgeLimit);
