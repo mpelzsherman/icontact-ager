@@ -2,7 +2,7 @@
 
 define('STATUS_CODE_SUCCESS', 200);
 
-function callResource($url, $method, $data = null, $type='json', $bDieOnError=true)
+function callResource($url, $method, $data = null, $type='json', $bDieOnError=false)
 {
 	$url    = $GLOBALS['config']['apiUrl'] . $url;
 	$handle = curl_init();
