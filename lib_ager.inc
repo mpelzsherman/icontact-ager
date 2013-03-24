@@ -54,8 +54,8 @@ function agePurchasers($accountId, $clientFolderId, $purchasedList, $deadList, $
 		if (!checkContactStatus($accountId, $clientFolderId, $aPurchaser)) {
 			continue;
 		}
-        $aContact = callResource("/a/{$accountId}/c/{$clientFolderId}/contacts/{$aProspect['contactId']}", 'GET');
-        $iElapsedDays = floor((time() - strtotime($aProspect['addDate'])) / (24 * 60 * 60));
+        $aContact = callResource("/a/{$accountId}/c/{$clientFolderId}/contacts/{$aPurchaser['contactId']}", 'GET');
+        $iElapsedDays = floor((time() - strtotime($aPurchaser['addDate'])) / (24 * 60 * 60));
 		$bTimeElapsed = ($iElapsedDays > $purchaserAgeLimit);
 		if ($bTimeElapsed) {
             echo "{$aContact['data']['contact']['email']} has not purchased for $iElapsedDays days. ";
