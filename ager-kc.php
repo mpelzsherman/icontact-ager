@@ -18,6 +18,10 @@ $prospectList = 23140;
 $purchasedList = 23139;
 $deadList = 32558;
 
+$customerBroadcastList = 33974;
+
 ageProspects($accountId, $clientFolderId, $prospectList, $purchasedList, $deadList);
+
+agePurchasers($accountId, $clientFolderId, $purchasedList, $customerBroadcastList);
 
 ?>
